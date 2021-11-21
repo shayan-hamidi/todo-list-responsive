@@ -1,0 +1,195 @@
+@keyframes deleteDivAnimation {
+    0%{
+        opacity: 0%;
+    }
+    25%{
+        opacity: 25%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Josefin Sans",sans-serif;
+    background-image: url('images/bg-desktop-light.3508d620.jpg');
+    background-size: cover 300px;
+    background-repeat: no-repeat;
+}
+nav{
+    width: 100%;
+}
+#navImage{
+    width: 100%;
+    position: sticky;
+    z-index: 0;
+}
+.container{
+    width: 50%;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-size: 40px;
+    color: #fff;
+}
+.switch-theme-button{
+    background: transparent;
+    float: right;
+    border: none;
+}
+#list-input-box{
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 35px 50px rgb(194 195 214 / 50%);
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.add-input{
+    outline: none;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    margin: 0px 15px 0px 15px;
+    border: 1px solid #e4e5f1;
+}
+.list-input{
+    width: 90%;
+    height: 50px;
+    border: none;
+    background: transparent;
+    font-size: 19px;
+    color: #777a92;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    font-size: 19px;
+}
+#todo-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 35px 50px rgb(194 195 214 / 50%);
+}
+.checkButtonTrue {
+    background: url('./images/icon-check.a8fb15d0.svg'),linear-gradient(135deg,#57ddff,#c058f3) !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+}
+.checkButton{
+    outline: none;
+    border-radius: 50% !important;
+    height: 24px;
+    width: 24px;
+    margin: 0px 15px 0px 15px;    
+    background: transparent;
+    border: 1px solid #e4e5f1;
+}
+.todo-titr-false{
+    font-size: 19px;
+    letter-spacing: -.25px;
+    color: #777a92;
+}
+.todo-row-box{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    cursor: grab;
+    border-bottom: 1px solid grey;
+}
+.todo-row-box:hover button{
+    animation: deleteDivAnimation;
+    animation-duration: 1s;
+    opacity: 100;
+    border: none;
+    background: transparent;
+}
+.todo-row{
+    display:flex;
+    flex-direction:row;
+}
+.delete-icon{
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    margin-right: 20px;
+    opacity: 0;
+}
+.delete-icon:hover{
+    animation: deleteDivAnimation;
+    animation-duration: 1s;
+    opacity: 100;
+    border: none;
+}
+
+h4{
+    text-align: center;
+    color: #777a92;
+    margin: 30px 0px 30px 0px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 35px 50px rgb(194 195 214 / 50%);
+}
+footer ul a{
+    text-decoration: none;
+    color: #777a92;
+    margin: 0px 5px 0px 5px;
+}
+footer  a{
+    text-decoration: none;
+    color: #777a92;
+    cursor: pointer;
+}
+footer ul a{
+    font-weight: bold;
+}
+.todo-titr-done{
+    text-decoration: line-through;
+    color: #777a92;
+    font-size: 19px;
+    opacity: 50%;
+}
+#moonDark{
+    cursor: pointer;
+}
+#sunLight{
+    display: none;
+    cursor: pointer;
+}
